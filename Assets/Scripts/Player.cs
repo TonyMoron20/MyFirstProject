@@ -8,6 +8,9 @@ public class Player : MonoBehaviour
     public float moveSpeed = 0f;
     public float rotateSpeed = 0f;
     public float jumpSpeed = 0f;
+    public GameObject bullet;
+    public Transform shootPoint;
+    public float bulletSpeed = 100.0f;
 
     private float hInput, vInput;
     private Rigidbody _rb;
@@ -37,6 +40,13 @@ public class Player : MonoBehaviour
         this.transform.Translate(vInput * Time.deltaTime * Vector3.forward);
         this.transform.Rotate(hInput * Time.deltaTime * Vector3.up);
         */
+
+        if(Input.GetMouseButtonDown(0))
+        {
+            GameObject newBullet = Instantiate(bullet, shootPoint.position, shootPoint.rotation) as GameObject;
+            Rigidbody bulletRb = newBullet.GetComponent<Rigidbody>();
+            bulletRb.velocity = shootPoint.forward * bulletSpeed;
+        }
 
         if (Input.GetKeyDown(KeyCode.Space) && canJump)
         {
