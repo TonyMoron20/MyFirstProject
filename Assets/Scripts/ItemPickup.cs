@@ -19,7 +19,7 @@ public class ItemPickup : MonoBehaviour
         if(collision.gameObject.name == "Player")
         {
             // Se destruira el padre del collider
-            Destroy(this.transform.parent.gameObject );
+            Destroy(this.transform.parent.gameObject);
             // A traves del "gameManager" se accede a la variable que es publica y que permite añadir valores a las variables privadas del Game Manager.
             Debug.Log("Item recolectado");
             gameManager.Items++;

@@ -1781,7 +1781,7 @@ GameObject:
   - component: {fileID: 1708427298}
   - component: {fileID: 1708427297}
   m_Layer: 0
-  m_Name: Game  Manager
+  m_Name: Game Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1799,6 +1799,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cbb89099af32fe4393bcced65068191, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  labelText: Recolecta todos los items
+  maxItems: 2
 --- !u!4 &1708427298
 Transform:
   m_ObjectHideFlags: 0
